@@ -1,0 +1,43 @@
+{
+  "name": "vassal-launcher",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "repository": "",
+  "main": "main.js",
+  "devDependencies": {
+    "electron": "^1.4.1",
+    "electron-builder": "^20.28.1"
+  },
+  "dependencies": {},
+  "scripts": {
+    "start": "electron .",
+    "dist": "build"
+  },
+  "build": {
+    "appId": "com.bdegroot.vassal.vassal-launcher",
+    "productName": "VASSAL Launcher",
+    "icon": "assets/VASSAL.icns",
+    
+    "fileAssociations": [
+      {
+        "ext": "vlog",
+        "name": "VASSAL Log File",
+        "role": "Editor"
+      },
+      {
+        "ext": "vsav",
+        "name": "VASSAL Save File",
+        "role": "Editor"
+      }
+    ],
+
+    "directories": {
+      "buildResources": "assets",
+      "output": "dist"
+    },
+    "mac": {
+      "category": ""
+    }
+  }
+}
